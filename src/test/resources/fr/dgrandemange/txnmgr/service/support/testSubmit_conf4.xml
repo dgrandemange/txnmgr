@@ -1,0 +1,41 @@
+<txnmgr name="kdoTxn">
+
+	<participant
+		class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Ptp1"
+		logger="Q2">
+		<property name="ok" value="grp1" transition="ok" />
+		<property name="nok" value="grp2" transition="nok" />
+	</participant>
+
+	<group name="grp1">
+		<participant
+			class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Grp1_Ptp1"
+			logger="Q2" />
+	</group>
+
+	<group name="grp2">
+		<participant
+			class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Grp2_Ptp1"
+			logger="Q2">
+			<property name="ok" value="grp3" transition="ok" />
+			<property name="nok" value="" transition="nok" />
+		</participant>
+
+		<participant
+			class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Grp2_Ptp2"
+			logger="Q2" />
+	</group>
+
+	<group name="grp3">
+		<participant
+			class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Grp3_Ptp1"
+			logger="Q2" />
+	</group>
+
+	<participant
+		class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Ptp2"
+		logger="Q2">
+		<property name="dummyProp1" value="dummyVal1" />
+	</participant>
+
+</txnmgr>

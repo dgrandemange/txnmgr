@@ -1,0 +1,15 @@
+<txnmgr name="kdoTxn">
+
+	<participant
+		class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Ptp1"
+		logger="Q2">
+		<property name="dummyProp1" value="dummyVal1" />
+	</participant>
+
+	<participant
+		class="com.mbs.testtxmgrcfg.service.support.TransactionMgrImplTest.Ptp2"
+		logger="Q2">
+		<property name="dummyProp1" value="dummyVal1" />
+	</participant>
+	
+</txnmgr>
