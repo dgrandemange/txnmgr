@@ -1,4 +1,4 @@
-When you want some atomic tasks to be executed one after another following a specific workflow, and when you want those  processed tasks to be cancelled when, at some point in the workflow, an unexpected error occurs, then this set of classes may help you.
+When you want some atomic tasks to be executed one after another following a specific workflow, and when you want those  processed tasks to be cancelled if, at some point in the workflow, an unexpected error occurs, then this set of classes may help you.
 
 Note : this project is very much inspired by [jPos](http://www.jpos.org/) monetic framework's [transaction manager concepts](http://www.andyorrock.com/2007/02/the_jpos_transa.html). It intends not to be an alternative nor a concurrent to the jPos transaction manager which works just fine. Rather, it provides some set of classes that are candidate to dependency injection through an IOC container (like for instance [Spring](http://docs.spring.io/spring/docs/3.0.x/reference/beans.html)).
 
