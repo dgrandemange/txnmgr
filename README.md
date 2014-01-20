@@ -15,6 +15,6 @@ All <i>groups</i> must be registered in a <code>fr.dgrandemange.txnmgr.model.Par
 
 The transaction is handled by a <i>transaction manager</i>. A basic implementation is available with the  <code>fr.dgrandemange.txnmgr.service.support.TransactionMgrImpl</code> class.
 
-See a sample usage in this unit test : [/src/test/java/fr/dgrandemange/txnmgr/service/support/TransactionMgrImplTest.java]
+See a sample usage in this [unit test](/src/test/java/fr/dgrandemange/txnmgr/service/support/TransactionMgrImplTest.java).
 
-See also the [txnmgr-springframework-ext](https://github.com/dgrandemange/txnmgr-springframework-ext) project which provides a way to define (and to inject external dependencies into) participants and groups through a Spring factory, using a XML application context configuration.
+See also the [txnmgr-springframework-ext](https://github.com/dgrandemange/txnmgr-springframework-ext) project which provides a nice way to configure (definition and external dependencies injection) participants and groups through a Spring XML application context configuration.
