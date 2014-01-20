@@ -3,17 +3,18 @@ When you want some atomic tasks to be executed one after another following a spe
 Note : this project is very much inspired by [jPos](http://www.jpos.org/) monetic framework's [transaction manager concepts](http://www.andyorrock.com/2007/02/the_jpos_transa.html). It intends not to be an alternative nor a concurrent to the jPos transaction manager which works just fine. Rather, it provides some set of classes that are candidate to dependency injection through an IOC container (like for instance [Spring](http://docs.spring.io/spring/docs/3.0.x/reference/beans.html)).
 
 <h2>Recipee</h2>
-First, think about your workflow and what should be done from a business point of view. Doing so, you should be able to identify the different tasks you need to do the job. We will call theses tasks <i>participants</i> (as jPos does).
+First, think about your workflow and what should be done from a business point of view. Doing so, you should be able to identify the different tasks you need. We will call theses tasks <i>participants</i>.
 A <i>participant</i> has to be an implementation of the <code>fr.dgrandemange.txnmgr.service.IParticipant</code> interface.
 
-In your workflow, there may be different ways for the job to be done, depending on the execution context.
+In your workflow, there may be different ways for the job to be done, depending on the execution context. So, at some points in the workflow, some paths will be <i>selected</i> and some others won't.
 
-When a participant is processed (see method <code>fr.dgrandemange.txnmgr.service.IParticipant.execute(IContextMgr contextMgr)</code>), it can returns a space delimited list of <i>group</i> names (this is about <i>group(s) selection</i>).<br>
-A <i>group</i> is an ordered list of <i>participants</i>. When a <i>group</i> is selected, its participants are executed, following the order of their declaration in this <i>group</i>.
+So how is the selection done ? <br>
+Well, when a participant is processed (see method <code>fr.dgrandemange.txnmgr.service.IParticipant.execute(IContextMgr contextMgr)</code>), it can returns a space delimited list of <i>group</i> names. A <i>group</i> is an ordered list of <i>participants</i>. <br>
+When a <i>group</i> is selected, its participants are executed one after another, following the order of their declaration in the <i>group</i>.
 
 All <i>groups</i> must be registered in a <code>fr.dgrandemange.txnmgr.model.ParticipantsGroupRegistry</code> and uniquely identified by a name.
 
-The transaction is handled by a <i>transaction manager</i>. A basic implementation is available with the  <code>fr.dgrandemange.txnmgr.service.support.TransactionMgrImpl</code> class.
+The transaction is handled by a <i>transaction manager</i>. A basic implementation is provided with the <code>fr.dgrandemange.txnmgr.service.support.TransactionMgrImpl</code> class.
 
 See a sample usage in this [unit test](/src/test/java/fr/dgrandemange/txnmgr/service/support/TransactionMgrImplTest.java).
 
