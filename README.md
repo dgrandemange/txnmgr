@@ -17,4 +17,12 @@ The transaction is handled by a <i>transaction manager</i>. A basic implementati
 
 See a sample usage in this [unit test](/src/test/java/fr/dgrandemange/txnmgr/service/support/TransactionMgrImplTest.java).
 
-See also the [txnmgr-springframework-ext](https://github.com/dgrandemange/txnmgr-springframework-ext) project which provides a nice way to configure (definition and external dependencies injection) participants and groups through a Spring XML application context configuration.
+<h2>Related pojects</h2>
+<ul>
+<li>
+the [txnmgr-springframework-ext](https://github.com/dgrandemange/txnmgr-springframework-ext) project which provides a nice way to configure (definition and external dependencies injection) participants and groups through a Spring XML application context configuration.
+</li>
+<li>
+TODO
+</li>
+</ul>
