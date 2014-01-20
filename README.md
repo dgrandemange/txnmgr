@@ -18,11 +18,6 @@ The transaction is handled by a <i>transaction manager</i>. A basic implementati
 See a sample usage in this [unit test](/src/test/java/fr/dgrandemange/txnmgr/service/support/TransactionMgrImplTest.java).
 
 <h2>Related projects</h2>
-<ul>
-<li>
-the [txnmgr-springframework-ext](https://github.com/dgrandemange/txnmgr-springframework-ext) project which provides a nice way to configure (definition and external dependencies injection) participants and groups through a Spring XML application context configuration.
-</li>
-<li>
-the [jPos Workflow Eclipse plugin](https://github.com/dgrandemange/jPosWorkflowEclipsePlugin) project which provides a way to parse an XML configuraiton of a transaction workflow, and show it as directed graph uner Eclipse IDE
-</li>
-</ul>
+The [txnmgr-springframework-ext](https://github.com/dgrandemange/txnmgr-springframework-ext) project provides a nice way to configure (definition and external dependencies injection) participants (and groups of) through a Spring XML application context configuration.
+
+The [jPos Workflow Eclipse plugin](https://github.com/dgrandemange/jPosWorkflowEclipsePlugin) project which provides a way to view a transaction workflow XML configuration as a directed graph under the Eclipse IDE.
