@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.dgrandemange</groupId>
 	<artifactId>txnmgr</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<name>txnmgr</name>
 	<description>Simple transaction management framework</description>
