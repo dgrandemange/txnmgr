@@ -2,6 +2,16 @@ When you want some atomic tasks to be executed one after another following a spe
 
 Note : this project is very much inspired by [jPos](http://www.jpos.org/) monetic framework's [transaction manager concepts](http://www.andyorrock.com/2007/02/the_jpos_transa.html). It intends not to be an alternative nor a concurrent to the jPos transaction manager which works just fine. Rather, it provides some set of classes that are candidate to dependency injection through an IOC container (like for instance [Spring](http://docs.spring.io/spring/docs/3.0.x/reference/beans.html)).
 
+<h2>Adding txnmgr to a Maven project</h2>
+Add the following dependency section to your pom.xml :
+```
+<dependency>
+    <groupId>com.github.dgrandemange</groupId>
+    <artifactId>txnmgr</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
 <h2>Recipee</h2>
 First, think about your workflow and what should be done from a business point of view. Doing so, you should be able to identify the different tasks you need. We will call theses tasks <i>participants</i>.
 A <i>participant</i> has to be an implementation of the <code>fr.dgrandemange.txnmgr.service.IParticipant</code> interface.
